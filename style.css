@@ -1,0 +1,485 @@
+/* Общие сбросы и переменные */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff4d4d;
+    --secondary: #333;
+    --light: #f4f4f4;
+    --dark: #222;
+    --text: #555;
+    --white: #fff;
+    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Типографика */
+h1, h2, h3, h4 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e63939;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Header */
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: var(--primary);
+}
+
+.nav__link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.burger span {
+    width: 100%;
+    height: 3px;
+    background: var(--dark);
+    transition: var(--transition);
+}
+
+/* Hero секция */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080?text=Фитнес') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Features */
+.features {
+    padding: 5rem 0;
+    background: var(--light);
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* CTA секция */
+.cta {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.cta__btn {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.cta__btn:hover {
+    background: var(--light);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary);
+}
+
+/* Страницы (общие) */
+.page-header {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+/* Расписание */
+.schedule__filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.schedule__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.class-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 5px solid var(--primary);
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-time {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.class-trainer {
+    color: var(--text);
+    font-style: italic;
+}
+
+/* Тренеры */
+.trainers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.trainer-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+}
+
+.trainer-photo {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.trainer-name {
+    margin: 1rem 0 0.5rem;
+}
+
+.trainer-specialty {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.trainer-desc {
+    padding: 1rem;
+}
+
+/* Контакты */
+.contacts__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.contacts__info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacts__form input,
+.contacts__form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contacts__form input:focus,
+.contacts__form textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease;
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        transition: var(--transition);
+        padding: 2rem;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .contacts__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+}

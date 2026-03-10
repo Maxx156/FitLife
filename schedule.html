@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание | FitLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">FitLife</a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="schedule.html" class="nav__link active">Расписание</a></li>
+                    <li><a href="trainers.html" class="nav__link">Тренеры</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title animate-fadeIn">Расписание занятий</h1>
+            </div>
+        </section>
+
+        <section class="schedule">
+            <div class="container">
+                <div class="schedule__filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="morning">Утро</button>
+                    <button class="filter-btn" data-filter="day">День</button>
+                    <button class="filter-btn" data-filter="evening">Вечер</button>
+                </div>
+                <div class="schedule__grid">
+                    <div class="class-card" data-time="morning">
+                        <h3>Йога</h3>
+                        <p class="class-time">08:00 - 09:00</p>
+                        <p class="class-trainer">Анна Смирнова</p>
+                    </div>
+                    <div class="class-card" data-time="morning">
+                        <h3>Пилатес</h3>
+                        <p class="class-time">09:30 - 10:30</p>
+                        <p class="class-trainer">Елена Петрова</p>
+                    </div>
+                    <div class="class-card" data-time="day">
+                        <h3>Функциональный тренинг</h3>
+                        <p class="class-time">12:00 - 13:00</p>
+                        <p class="class-trainer">Дмитрий Иванов</p>
+                    </div>
+                    <div class="class-card" data-time="day">
+                        <h3>Кроссфит</h3>
+                        <p class="class-time">14:00 - 15:00</p>
+                        <p class="class-trainer">Максим Сидоров</p>
+                    </div>
+                    <div class="class-card" data-time="evening">
+                        <h3>Стретчинг</h3>
+                        <p class="class-time">18:00 - 19:00</p>
+                        <p class="class-trainer">Ольга Кузнецова</p>
+                    </div>
+                    <div class="class-card" data-time="evening">
+                        <h3>Бокс</h3>
+                        <p class="class-time">19:30 - 20:30</p>
+                        <p class="class-trainer">Алексей Орлов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2025 FitLife. Все права защищены.</p>
+            <div class="socials">
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

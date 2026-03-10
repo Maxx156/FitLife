@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | FitLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">FitLife</a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="schedule.html" class="nav__link">Расписание</a></li>
+                    <li><a href="trainers.html" class="nav__link">Тренеры</a></li>
+                    <li><a href="contacts.html" class="nav__link active">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title animate-fadeIn">Контакты</h1>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="container contacts__grid">
+                <div class="contacts__info">
+                    <h2>Свяжитесь с нами</h2>
+                    <p><strong>Адрес:</strong> ул. Спортивная, д. 10, Москва</p>
+                    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                    <p><strong>Email:</strong> info@fitlife.ru</p>
+                    <p><strong>Часы работы:</strong> круглосуточно</p>
+                </div>
+                <form class="contacts__form" id="contactForm">
+                    <h2>Напишите нам</h2>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Сообщение" rows="5" required></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <h2 class="section-title">Как нас найти</h2>
+                <div class="map__container" style="background: #ddd; height: 300px; display: flex; align-items: center; justify-content: center;">
+                    <!-- Здесь можно вставить iframe карты, для примера просто текст -->
+                    <p>Карта проезда (здесь будет iframe)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2025 FitLife. Все права защищены.</p>
+            <div class="socials">
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

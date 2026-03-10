@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренеры | FitLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">FitLife</a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="schedule.html" class="nav__link">Расписание</a></li>
+                    <li><a href="trainers.html" class="nav__link active">Тренеры</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title animate-fadeIn">Наши тренеры</h1>
+            </div>
+        </section>
+
+        <section class="trainers">
+            <div class="container trainers__grid">
+                <div class="trainer-card animate-on-scroll">
+                    <div class="trainer-photo" style="background-image: url('https://via.placeholder.com/300x300?text=Анна')"></div>
+                    <h3 class="trainer-name">Анна Смирнова</h3>
+                    <p class="trainer-specialty">Йога, пилатес</p>
+                    <p class="trainer-desc">Сертифицированный инструктор с 8-летним стажем.</p>
+                </div>
+                <div class="trainer-card animate-on-scroll">
+                    <div class="trainer-photo" style="background-image: url('https://via.placeholder.com/300x300?text=Дмитрий')"></div>
+                    <h3 class="trainer-name">Дмитрий Иванов</h3>
+                    <p class="trainer-specialty">Функциональный тренинг, кроссфит</p>
+                    <p class="trainer-desc">Мастер спорта, тренер сборной по кроссфиту.</p>
+                </div>
+                <div class="trainer-card animate-on-scroll">
+                    <div class="trainer-photo" style="background-image: url('https://via.placeholder.com/300x300?text=Ольга')"></div>
+                    <h3 class="trainer-name">Ольга Кузнецова</h3>
+                    <p class="trainer-specialty">Стретчинг, боди-балет</p>
+                    <p class="trainer-desc">Хореограф, специалист по растяжке.</p>
+                </div>
+                <div class="trainer-card animate-on-scroll">
+                    <div class="trainer-photo" style="background-image: url('https://via.placeholder.com/300x300?text=Алексей')"></div>
+                    <h3 class="trainer-name">Алексей Орлов</h3>
+                    <p class="trainer-specialty">Бокс, ММА</p>
+                    <p class="trainer-desc">Кандидат в мастера спорта по боксу.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2025 FitLife. Все права защищены.</p>
+            <div class="socials">
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
